@@ -1,0 +1,6 @@
+node_modules
+.next
+dist
+.env
+*.log
+!xray/bin/.gitkeep

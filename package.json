@@ -1,0 +1,15 @@
+{
+  "name": "anythings-by-tury",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,white \"npm run dev -w @anythings/web\" \"npm run dev -w @anythings/api\"",
+    "build": "npm run build -w @anythings/web && npm run build -w @anythings/api",
+    "start": "concurrently \"npm run start -w @anythings/web\" \"npm run start -w @anythings/api\"",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
